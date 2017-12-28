@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aR2-x8-U9T"/>
+                        <viewControllerLayoutGuide type="bottom" id="e3Q-15-nee"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VA-EQ-S65">
+                                <rect key="frame" x="167.5" y="99" width="40" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ODH-wU-GCl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="切换"/>
+                                <connections>
+                                    <action selector="switchAngle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkZ-cO-4j0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM4-Md-dLI">
+                                <rect key="frame" x="167.5" y="168" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="map-BX-er5"/>
+                                </constraints>
+                                <state key="normal" title="上麦"/>
+                                <connections>
+                                    <action selector="upToMember:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1p2-7a-Pza"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MG-RE-rBD">
+                                <rect key="frame" x="167.5" y="236" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="AGJ-gW-uMX"/>
+                                </constraints>
+                                <state key="normal" title="下麦"/>
+                                <connections>
+                                    <action selector="downToMember:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7gv-OF-cOX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1u-J3-TBM">
+                                <rect key="frame" x="167" y="304" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9j9-IL-QNQ"/>
+                                </constraints>
+                                <state key="normal" title="退出"/>
+                                <connections>
+                                    <action selector="quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bO-6i-Kfx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AM4-Md-dLI" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="2TX-b9-1gj"/>
+                            <constraint firstItem="2MG-RE-rBD" firstAttribute="top" secondItem="AM4-Md-dLI" secondAttribute="bottom" constant="38" id="jrw-wq-tuV"/>
+                            <constraint firstItem="b1u-J3-TBM" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="kWc-rq-9BE"/>
+                            <constraint firstItem="2MG-RE-rBD" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="m1p-M2-31e"/>
+                            <constraint firstItem="AM4-Md-dLI" firstAttribute="top" secondItem="0VA-EQ-S65" secondAttribute="bottom" constant="37" id="mIP-Ip-LbM"/>
+                            <constraint firstItem="b1u-J3-TBM" firstAttribute="top" secondItem="2MG-RE-rBD" secondAttribute="bottom" constant="38" id="rpN-4y-KaL"/>
+                            <constraint firstItem="0VA-EQ-S65" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tam-D5-OZ1"/>
+                            <constraint firstItem="0VA-EQ-S65" firstAttribute="top" secondItem="aR2-x8-U9T" secondAttribute="bottom" constant="79" id="vrC-hn-j0s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downBtn" destination="2MG-RE-rBD" id="2PA-uP-MGx"/>
+                        <outlet property="quitBtn" destination="b1u-J3-TBM" id="ceh-VV-HRn"/>
+                        <outlet property="switchBtn" destination="0VA-EQ-S65" id="ynL-ad-PbS"/>
+                        <outlet property="upBtn" destination="AM4-Md-dLI" id="xRl-gN-GZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

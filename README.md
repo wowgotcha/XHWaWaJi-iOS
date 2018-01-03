@@ -4,7 +4,7 @@
 
 > [XHLive](https://github.com/wowgotcha/XHWaWaJi-iOS) 已正常接入framework，包含[XHWaWaJi.Framework](https://github.com/wowgotcha/XHWaWaJi-iOS/tree/master/XHLive/XHLive)和腾讯互动直播SDK的[下载脚本](https://github.com/wowgotcha/XHWaWaJi-iOS/tree/master/XHLive/XHLive/TencentLiveSDK)，可以方便的找到并执行。
 
-另外，请在Build Settings设置`Allow Non-modular Includes in Framework Modules`为No
+另外，请在Build Settings设置`Allow Non-modular Includes in Framework Modules`为Yes
 
 ### 二、接入流程
 #### 初始化XHLive

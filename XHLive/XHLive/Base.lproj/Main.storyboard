@@ -62,10 +62,100 @@
                                     <action selector="quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bO-6i-Kfx"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xS-LG-hzI">
+                                <rect key="frame" x="215" y="507" width="160" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-s9-8d1">
+                                        <rect key="frame" x="60" y="8" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="c5N-5z-Igg"/>
+                                            <constraint firstAttribute="width" constant="40" id="utC-pL-Par"/>
+                                        </constraints>
+                                        <state key="normal" title="上"/>
+                                        <connections>
+                                            <action selector="directionDown:" destination="BYZ-38-t0r" eventType="touchDown" id="bZ0-7e-l6C"/>
+                                            <action selector="directionRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wHH-KA-mAl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COC-hO-rHM">
+                                        <rect key="frame" x="0.0" y="68" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2f6-vS-eRo"/>
+                                            <constraint firstAttribute="width" constant="40" id="S08-G3-qJU"/>
+                                        </constraints>
+                                        <state key="normal" title="左"/>
+                                        <connections>
+                                            <action selector="directionDown:" destination="BYZ-38-t0r" eventType="touchDown" id="TiH-pT-iBN"/>
+                                            <action selector="directionRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3uA-xO-B6L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-g8-flL">
+                                        <rect key="frame" x="60" y="68" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="5hl-Dr-vYM"/>
+                                            <constraint firstAttribute="height" constant="40" id="USb-NF-CZA"/>
+                                        </constraints>
+                                        <state key="normal" title="下"/>
+                                        <connections>
+                                            <action selector="directionDown:" destination="BYZ-38-t0r" eventType="touchDown" id="P5p-Ga-cdm"/>
+                                            <action selector="directionRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTW-3D-POp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrf-WU-OVs">
+                                        <rect key="frame" x="120" y="68" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Bh6-vV-h7G"/>
+                                            <constraint firstAttribute="height" constant="40" id="XPp-6K-2ev"/>
+                                        </constraints>
+                                        <state key="normal" title="右"/>
+                                        <connections>
+                                            <action selector="directionDown:" destination="BYZ-38-t0r" eventType="touchDown" id="DmA-Am-5nX"/>
+                                            <action selector="directionRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pbl-55-txC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0Z-8v-NyB">
+                                        <rect key="frame" x="60" y="120" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9Q5-Zz-Rz8"/>
+                                            <constraint firstAttribute="width" constant="40" id="QAu-id-cCO"/>
+                                        </constraints>
+                                        <state key="normal" title="抓"/>
+                                        <connections>
+                                            <action selector="catchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9e-AL-IFl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nxp-g8-flL" firstAttribute="centerY" secondItem="COC-hO-rHM" secondAttribute="centerY" id="1OP-9o-y2x"/>
+                                    <constraint firstItem="bNT-s9-8d1" firstAttribute="centerX" secondItem="8xS-LG-hzI" secondAttribute="centerX" id="485-eV-O5H"/>
+                                    <constraint firstItem="COC-hO-rHM" firstAttribute="leading" secondItem="8xS-LG-hzI" secondAttribute="leading" id="A3A-GJ-Dwc"/>
+                                    <constraint firstItem="bNT-s9-8d1" firstAttribute="top" secondItem="8xS-LG-hzI" secondAttribute="top" constant="8" id="AfQ-N4-G4e"/>
+                                    <constraint firstAttribute="bottom" secondItem="k0Z-8v-NyB" secondAttribute="bottom" id="BM3-ca-Ta5"/>
+                                    <constraint firstItem="k0Z-8v-NyB" firstAttribute="centerX" secondItem="bNT-s9-8d1" secondAttribute="centerX" id="EZ6-7B-3Sr"/>
+                                    <constraint firstItem="Nxp-g8-flL" firstAttribute="centerX" secondItem="bNT-s9-8d1" secondAttribute="centerX" id="OOQ-Hv-6kR"/>
+                                    <constraint firstItem="Nxp-g8-flL" firstAttribute="top" secondItem="bNT-s9-8d1" secondAttribute="bottom" constant="20" id="WXr-6Q-STT"/>
+                                    <constraint firstAttribute="height" constant="160" id="YUw-fs-Tcb"/>
+                                    <constraint firstItem="xrf-WU-OVs" firstAttribute="centerY" secondItem="COC-hO-rHM" secondAttribute="centerY" id="hWu-HW-Dug"/>
+                                    <constraint firstAttribute="trailing" secondItem="xrf-WU-OVs" secondAttribute="trailing" id="lJZ-M6-9M0"/>
+                                    <constraint firstAttribute="width" constant="160" id="rtu-Kl-Duy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gal-gn-NEO">
+                                <rect key="frame" x="280" y="457" width="31" height="30"/>
+                                <state key="normal" title="连接"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95L-xE-QM5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AM4-Md-dLI" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="2TX-b9-1gj"/>
+                            <constraint firstItem="e3Q-15-nee" firstAttribute="top" secondItem="8xS-LG-hzI" secondAttribute="bottom" id="E54-GM-wbN"/>
+                            <constraint firstItem="8xS-LG-hzI" firstAttribute="top" secondItem="gal-gn-NEO" secondAttribute="bottom" constant="20" id="S5L-CR-Hhl"/>
+                            <constraint firstAttribute="trailing" secondItem="8xS-LG-hzI" secondAttribute="trailing" id="T53-MG-yYf"/>
+                            <constraint firstItem="8xS-LG-hzI" firstAttribute="centerX" secondItem="gal-gn-NEO" secondAttribute="centerX" id="hxv-ZL-NCZ"/>
                             <constraint firstItem="2MG-RE-rBD" firstAttribute="top" secondItem="AM4-Md-dLI" secondAttribute="bottom" constant="38" id="jrw-wq-tuV"/>
                             <constraint firstItem="b1u-J3-TBM" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="kWc-rq-9BE"/>
                             <constraint firstItem="2MG-RE-rBD" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="m1p-M2-31e"/>

@@ -44,6 +44,7 @@
 		4C8402CB1FCE5EFF00300D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8402C91FCE5EFF00300D9B /* Main.storyboard */; };
 		4C8402CD1FCE5EFF00300D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8402CC1FCE5EFF00300D9B /* Assets.xcassets */; };
 		4C8402D31FCE5EFF00300D9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8402D21FCE5EFF00300D9B /* main.m */; };
+		4CBC39031FFC8EE200D84A79 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBC39021FFC8EE200D84A79 /* libicucore.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		4C8402CC1FCE5EFF00300D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C8402D11FCE5EFF00300D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8402D21FCE5EFF00300D9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CBC39021FFC8EE200D84A79 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBC39031FFC8EE200D84A79 /* libicucore.tbd in Frameworks */,
 				4C7BB2451FF49FF1000336A6 /* libresolv.tbd in Frameworks */,
 				4C7BB25A1FF4A2F3000336A6 /* ILiveSDK.framework in Frameworks */,
 				4C7BB1F51FF495CC000336A6 /* AssetsLibrary.framework in Frameworks */,
@@ -135,6 +138,7 @@
 		4C7BB1CD1FF49535000336A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CBC39021FFC8EE200D84A79 /* libicucore.tbd */,
 				4C7BB2441FF49FF1000336A6 /* libresolv.tbd */,
 				4C7BB1F41FF495CC000336A6 /* AssetsLibrary.framework */,
 				4C7BB1F21FF495C5000336A6 /* OpenAL.framework */,

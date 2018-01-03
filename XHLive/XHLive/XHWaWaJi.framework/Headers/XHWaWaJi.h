@@ -7,3 +7,4 @@
 //
 
 #import "XHLiveManager.h"
+#import "XHPlayerManager.h"

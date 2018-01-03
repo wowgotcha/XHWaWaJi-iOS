@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import <XHWaWaJi/XHLiveManager.h>
+#import <XHWaWaJi/XHWaWaJi.h>
 
-
-@interface ViewController ()
+@interface ViewController ()<XHPlayerManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *switchBtn;
 @property (weak, nonatomic) IBOutlet UIButton *upBtn;
 @property (weak, nonatomic) IBOutlet UIButton *downBtn;
@@ -20,7 +19,7 @@
 
 @end
 
-NSString * const kRoomId = @"500001";
+NSString * const kRoomId = <#roomID#>;
 
 @implementation ViewController
 
@@ -31,8 +30,9 @@ NSString * const kRoomId = @"500001";
 }
 
 - (void)login{
-    NSString *sig=  @"eJxlj11LwzAUhu-7K0JuJ5KmjbaCF11XRVgn0q6iN6EuZ1v8SGOWTrPhf3dWxYDv7fOc8-LuA4QQrqfVcbtYdL2y3DoNGJ0hTPDRH9RaCt5aHhnxD8K7lgZ4u7RgBhgyxighviMFKCuX8tfw0EY88eH-N4kPh4ycppGvyNUAy2KeX2V58*xotKMP*WV2zbokedQXt03HqtGdie1kfDNfT0ifKNhlssh6VqspLWcJnaXgqHobwep1XbptUTWhFmKcuvtS1rmG4tyrtPIFfsaEcUxPQubP2YLZyE4NAiUHhUbkKzj4CD4BqwFauw__";
-    [[XHLiveManager sharedManager] loginWithUserId:@"1" sig:sig success:^{
+    NSString *sig = <#userSig#>;
+    
+    [[XHLiveManager sharedManager] loginWithUserId:<#userId#> sig:sig success:^{
         NSLog(@"登录成功");
         [self join];
     } failure:^(NSString *module, int errId, NSString *errMsg) {
@@ -47,7 +47,12 @@ NSString * const kRoomId = @"500001";
     XHLiveManager *manager = [XHLiveManager sharedManager];
     [manager joinRoom:kRoomId liveCarema:camera rootView:self.view playingFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height/2, 180, 240) success:^{
         NSLog(@"加入成功");
-        
+        NSArray *renders = [manager getAllAVRenderViews];
+        for (ILiveRenderView *renderView in renders) {
+            renderView.autoRotate = NO;
+            renderView.rotateAngle = ILIVEROTATION_90;
+            renderView.backgroundColor = [UIColor blackColor];
+        }
     } failure:^(NSString *module, int errId, NSString *errMsg) {
         NSLog(@"加入失败");
     }];
@@ -81,4 +86,77 @@ NSString * const kRoomId = @"500001";
     }];
 }
 
+- (IBAction)startGame:(UIButton *)sender {
+    [self startGameWebSocket];
+}
+
+- (void)startGameWebSocket{
+    NSString *wsURL = @"ws://ws.open.wowgotcha.com:9090/play/5f21c3aa3badab94d35cdaa8b0f246e356fbe95f";
+    XHPlayerManager *manager = [XHPlayerManager sharedManager];
+    [manager setManagerListener:self];
+    [manager connectWithWebSocketURL:wsURL success:^{
+        NSLog(@"websocket连接成功");
+    } failure:^(NSError *error) {
+        NSLog(@"websocket连接失败");
+    }];
+}
+
+- (IBAction)directionDown:(UIButton *)sender {
+    if (sender.tag == 1000) {
+        // 上
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationUpPress];
+    }else if (sender.tag == 1001){
+        // 左
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationLeftPress];
+    }else if (sender.tag == 1002){
+        // 下
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationDownPress];
+    }else if (sender.tag == 1003){
+        // 右
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationRightPress];
+    }
+}
+
+- (IBAction)directionRelease:(UIButton *)sender {
+    if (sender.tag == 1000) {
+        // 上
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationUpRelease];
+    }else if (sender.tag == 1001){
+        // 左
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationLeftRelease];
+    }else if (sender.tag == 1002){
+        // 下
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationDownRelease];
+    }else if (sender.tag == 1003){
+        // 右
+        [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationRightRelease];
+    }
+}
+
+- (IBAction)catchAction:(UIButton *)sender {
+    [[XHPlayerManager sharedManager] sendOperation:XHPlayerOperationCatch];
+}
+
+- (void)roomReady:(NSDictionary *)readyInfo{
+    NSLog(@"room ready,%@",readyInfo);
+}
+
+- (void)insertCoinSuccess:(BOOL)success data:(NSDictionary *)data errorMsg:(NSString *)errorMsg{
+    if (success) {
+        // 投币成功
+        NSLog(@"投币成功game session id:%@",[data objectForKey:@"game_session_id"]);
+    }else{
+        NSLog(@"投币失败%@",errorMsg);
+    }
+}
+
+- (void)receiveGameResult:(BOOL)success sessionId:(NSString *)sessionId{
+    NSLog(@"游戏结束%@",sessionId);
+}
+
+- (void)websocketClosed{
+    NSLog(@"游戏结束,websocket关闭");
+}
+
 @end
+

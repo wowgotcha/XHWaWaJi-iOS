@@ -10,7 +10,7 @@
 
 @implementation Const
 
-const int TENCLOUDAPPID = 1400050793;
-const int TENCLOUDACCOUNTTYPE = 19331;
+const int TENCLOUDAPPID = <#TENCLOUDAPPID#>;
+const int TENCLOUDACCOUNTTYPE = <#TENCLOUDACCOUNTTYPE#>;
 
 @end

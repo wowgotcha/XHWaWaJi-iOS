@@ -141,8 +141,8 @@ NSString * const kRoomId = <#roomID#>;
     NSLog(@"room ready,%@",readyInfo);
 }
 
-- (void)insertCoinSuccess:(BOOL)success data:(NSDictionary *)data errorMsg:(NSString *)errorMsg{
-    if (success) {
+- (void)insertCoinResult:(BOOL)result data:(NSDictionary *)data errorMsg:(NSString *)errorMsg{
+    if (result) {
         // 投币成功
         NSLog(@"投币成功game session id:%@",[data objectForKey:@"game_session_id"]);
     }else{

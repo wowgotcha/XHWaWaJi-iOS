@@ -28,6 +28,11 @@ typedef NS_ENUM(NSInteger, XHPlayerOperation){
 - (void)roomReady:(NSDictionary *)readyInfo;
 
 /**
+ *  websocket连接成功，用户在上局游戏未结束，返回剩余时间等信息
+ */
+- (void)gameReconnect:(NSDictionary *)reconnectInfo;
+
+/**
  *  投币成功
  *  @param result    投币结果
  *  @param data    投币成功，会返回这个内容，否则为nil
@@ -41,6 +46,8 @@ typedef NS_ENUM(NSInteger, XHPlayerOperation){
  *  @param sessionId    游戏记录id
  */
 - (void)receiveGameResult:(BOOL)success sessionId:(NSString *)sessionId;
+
+
 
 @optional
 /**

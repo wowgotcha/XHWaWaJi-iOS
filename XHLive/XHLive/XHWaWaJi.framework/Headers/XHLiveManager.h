@@ -105,6 +105,11 @@ typedef void (^XHFailure)(NSString *vgd, int errId, NSString *errMsg);
  */
 - (NSArray<ILiveRenderView *> *)getAllAVRenderViews;
 
+/**
+ 获取当前摄像头的位置
+ @return NSInteger 0 => 主摄像头， 1 => 侧摄像头
+ */
+- (NSInteger)getCameraIndex;
 
 @end
 

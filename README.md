@@ -161,6 +161,12 @@ _注意：一个游戏房间支持的上麦数量有限，因此业务上要保�
     - (void)roomReady:(NSDictionary *)readyInfo;
     ```
 
+*  websocket连接成功，但用户在上局游戏未结束，会进入此回调，**`而不是roomReady回调`**，同时返回剩余时间等信息
+
+    ```
+    - (void)gameReconnect:(NSDictionary *)reconnectInfo;
+    ```
+
 * 投币结果，成功会接收到data，失败会接收errorMsg
 
     ```

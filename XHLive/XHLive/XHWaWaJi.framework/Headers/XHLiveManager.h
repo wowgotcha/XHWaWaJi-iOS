@@ -18,7 +18,7 @@ typedef void (^XHFailure)(NSString *vgd, int errId, NSString *errMsg);
 
 @class XHLiveCamera;
 
-@interface XHLiveManager : NSObject
+@interface XHLiveManager : NSObject <QAVLogger>
 
 /**
  *  管理类单例
@@ -105,11 +105,18 @@ typedef void (^XHFailure)(NSString *vgd, int errId, NSString *errMsg);
  */
 - (NSArray<ILiveRenderView *> *)getAllAVRenderViews;
 
+
 /**
  获取当前摄像头的位置
  @return NSInteger 0 => 主摄像头， 1 => 侧摄像头
  */
 - (NSInteger)getCameraIndex;
+
+
+/**
+ 禁用视频解码信息的Log
+ */
+- (void)disableLogPrint;
 
 @end
 

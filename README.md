@@ -186,4 +186,12 @@ _注意：一个游戏房间支持的上麦数量有限，因此业务上要保�
     ```
     
 
+#### 其他
+##### 1. 禁用音视频解码log方法
+* 在调用`initSdk`之前调用以下方法即可,该方法可以屏蔽掉绝大部分大部分log
+
+    ```
+    [[XHLiveManager sharedManager] disableLogPrint];
+    ```
+
 

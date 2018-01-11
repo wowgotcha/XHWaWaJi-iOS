@@ -141,6 +141,10 @@ NSString * const kRoomId = <#roomID#>;
     NSLog(@"room ready,%@",readyInfo);
 }
 
+- (void)gameReconnect:(NSDictionary *)reconnectInfo{
+    NSLog(@"game reconnect,%@",reconnectInfo);
+}
+
 - (void)insertCoinResult:(BOOL)result data:(NSDictionary *)data errorMsg:(NSString *)errorMsg{
     if (result) {
         // 投币成功

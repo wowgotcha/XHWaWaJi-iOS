@@ -100,23 +100,30 @@ typedef void (^XHFailure)(NSString *vgd, int errId, NSString *errMsg);
 
 
 /**
- 获取所有渲染窗口
- @return NSArray ILiveRenderView
+ *  获取所有渲染窗口
+ *  @return NSArray ILiveRenderView
  */
 - (NSArray<ILiveRenderView *> *)getAllAVRenderViews;
 
-
 /**
- 获取当前摄像头的位置
- @return NSInteger 0 => 主摄像头， 1 => 侧摄像头
+ *  获取当前摄像头的位置
+ *  @return NSInteger 0 => 主摄像头， 1 => 侧摄像头
  */
 - (NSInteger)getCameraIndex;
 
 
 /**
- 禁用视频解码信息的Log
+ *  禁用视频解码信息的Log
  */
 - (void)disableLogPrint;
+
+
+/**
+ *  设置系统声音为正常
+ *  由于对接互动直播ILiveSDK, 在调用以下几个方法时，会有音频通道变化的影响，导致系统声音变小
+ *  1.joinRoom 2.quitRoom 3.upToVideoMember 4.downToVideoMember
+ */
+- (void)setSystemVolumeNormal;
 
 @end
 

@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, XHPlayerOperation){
 
 @protocol XHPlayerManagerDelegate<NSObject>
 
+@required
 /**
  *  websocket连接成功，游戏进入roomReady状态
  */

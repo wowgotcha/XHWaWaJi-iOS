@@ -9,6 +9,8 @@
 build/
 DerivedData/
 
+XHWaWaJi/
+
 ## Various settings
 *.pbxuser
 !default.pbxuser

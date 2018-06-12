@@ -28,7 +28,6 @@
 		4C7BB1F11FF495BF000336A6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7BB1F01FF495BF000336A6 /* SystemConfiguration.framework */; };
 		4C7BB1F31FF495C5000336A6 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7BB1F21FF495C5000336A6 /* OpenAL.framework */; };
 		4C7BB1F51FF495CC000336A6 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7BB1F41FF495CC000336A6 /* AssetsLibrary.framework */; };
-		4C7BB2431FF49F49000336A6 /* XHWaWaJi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7BB2421FF49F49000336A6 /* XHWaWaJi.framework */; };
 		4C7BB2451FF49FF1000336A6 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7BB2441FF49FF1000336A6 /* libresolv.tbd */; };
 		4C7BB2531FF4A2F3000336A6 /* LoadSDK.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4C7BB2471FF4A2F3000336A6 /* LoadSDK.sh */; };
 		4C7BB2541FF4A2F3000336A6 /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7BB2491FF4A2F3000336A6 /* ImSDK.framework */; };
@@ -45,6 +44,7 @@
 		4C8402CD1FCE5EFF00300D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8402CC1FCE5EFF00300D9B /* Assets.xcassets */; };
 		4C8402D31FCE5EFF00300D9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8402D21FCE5EFF00300D9B /* main.m */; };
 		4CBC39031FFC8EE200D84A79 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBC39021FFC8EE200D84A79 /* libicucore.tbd */; };
+		A641696520CFC5B1007289B6 /* XHWaWaJi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A641696420CFC5B0007289B6 /* XHWaWaJi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +70,6 @@
 		4C7BB1F01FF495BF000336A6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4C7BB1F21FF495C5000336A6 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		4C7BB1F41FF495CC000336A6 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		4C7BB2421FF49F49000336A6 /* XHWaWaJi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XHWaWaJi.framework; sourceTree = "<group>"; };
 		4C7BB2441FF49FF1000336A6 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		4C7BB2471FF4A2F3000336A6 /* LoadSDK.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = LoadSDK.sh; sourceTree = "<group>"; };
 		4C7BB2491FF4A2F3000336A6 /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		4C8402D11FCE5EFF00300D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8402D21FCE5EFF00300D9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CBC39021FFC8EE200D84A79 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		A641696420CFC5B0007289B6 /* XHWaWaJi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XHWaWaJi.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,7 @@
 				4C7BB1DD1FF49574000336A6 /* libprotobuf.tbd in Frameworks */,
 				4C7BB1DB1FF4956A000336A6 /* libsqlite3.tbd in Frameworks */,
 				4C7BB2541FF4A2F3000336A6 /* ImSDK.framework in Frameworks */,
+				A641696520CFC5B1007289B6 /* XHWaWaJi.framework in Frameworks */,
 				4C7BB2591FF4A2F3000336A6 /* QAVSDK.framework in Frameworks */,
 				4C7BB1D91FF49562000336A6 /* libiconv.tbd in Frameworks */,
 				4C7BB1D71FF49559000336A6 /* libbz2.tbd in Frameworks */,
@@ -126,7 +127,6 @@
 				4C7BB1D31FF49548000336A6 /* libstdc++.6.tbd in Frameworks */,
 				4C7BB1D11FF49541000336A6 /* libstdc++.tbd in Frameworks */,
 				4C7BB2561FF4A2F3000336A6 /* IMCore.framework in Frameworks */,
-				4C7BB2431FF49F49000336A6 /* XHWaWaJi.framework in Frameworks */,
 				4C7BB2571FF4A2F3000336A6 /* QALSDK.framework in Frameworks */,
 				4C7BB1CF1FF49536000336A6 /* libc++.tbd in Frameworks */,
 			);
@@ -224,8 +224,8 @@
 		4C8402C21FCE5EFF00300D9B /* XHLive */ = {
 			isa = PBXGroup;
 			children = (
+				A641696420CFC5B0007289B6 /* XHWaWaJi.framework */,
 				4C7BB2461FF4A2F3000336A6 /* TencentLiveSDK */,
-				4C7BB2421FF49F49000336A6 /* XHWaWaJi.framework */,
 				4C8402C31FCE5EFF00300D9B /* AppDelegate.h */,
 				4C8402C41FCE5EFF00300D9B /* AppDelegate.m */,
 				4C74EE921FD13CEE0026B288 /* Const.h */,

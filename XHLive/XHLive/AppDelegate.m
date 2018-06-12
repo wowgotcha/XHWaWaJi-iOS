@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Const.h"
 #import <XHWaWaJi/XHWaWaJi.h>
+//#import "XHWaWaJi.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     // Override point for customization after application launch.
     
     [[XHLiveManager sharedManager] initSdk:TENCLOUDAPPID accountType:TENCLOUDACCOUNTTYPE];
-    
+    [[XHLiveManager sharedManager] disableLogPrint];
     return YES;
 }
 

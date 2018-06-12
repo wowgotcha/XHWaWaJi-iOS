@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -142,32 +142,71 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gal-gn-NEO">
-                                <rect key="frame" x="280" y="457" width="31" height="30"/>
+                                <rect key="frame" x="215" y="457" width="31" height="30"/>
                                 <state key="normal" title="连接"/>
                                 <connections>
-                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95L-xE-QM5"/>
+                                    <action selector="connectWS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJd-Zd-Yok"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAF-rI-aSL">
+                                <rect key="frame" x="280" y="457" width="31" height="30"/>
+                                <state key="normal" title="排队"/>
+                                <connections>
+                                    <action selector="startQueue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G17-tG-3SI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dg-pg-sC8">
+                                <rect key="frame" x="334" y="431" width="31" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DvD-ia-4oL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSz-PY-eAQ">
+                                <rect key="frame" x="334" y="469" width="31" height="30"/>
+                                <state key="normal" title="取消"/>
+                                <connections>
+                                    <action selector="cancelQueue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCQ-On-Qw3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOW-Dm-Y8X">
+                                <rect key="frame" x="334" y="361" width="31" height="30"/>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="closeWS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rd5-PN-Txw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AM4-Md-dLI" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="2TX-b9-1gj"/>
+                            <constraint firstItem="1dg-pg-sC8" firstAttribute="top" secondItem="LOW-Dm-Y8X" secondAttribute="bottom" constant="40" id="2yT-oV-7KG"/>
+                            <constraint firstItem="8xS-LG-hzI" firstAttribute="top" secondItem="tSz-PY-eAQ" secondAttribute="bottom" constant="8" id="3Hx-RT-wuj"/>
+                            <constraint firstItem="qAF-rI-aSL" firstAttribute="centerY" secondItem="gal-gn-NEO" secondAttribute="centerY" id="DNZ-dc-Ib7"/>
                             <constraint firstItem="e3Q-15-nee" firstAttribute="top" secondItem="8xS-LG-hzI" secondAttribute="bottom" id="E54-GM-wbN"/>
                             <constraint firstItem="8xS-LG-hzI" firstAttribute="top" secondItem="gal-gn-NEO" secondAttribute="bottom" constant="20" id="S5L-CR-Hhl"/>
                             <constraint firstAttribute="trailing" secondItem="8xS-LG-hzI" secondAttribute="trailing" id="T53-MG-yYf"/>
-                            <constraint firstItem="8xS-LG-hzI" firstAttribute="centerX" secondItem="gal-gn-NEO" secondAttribute="centerX" id="hxv-ZL-NCZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1dg-pg-sC8" secondAttribute="trailing" constant="10" id="Xn5-wZ-XxL"/>
+                            <constraint firstItem="qAF-rI-aSL" firstAttribute="centerX" secondItem="8xS-LG-hzI" secondAttribute="centerX" id="bAc-PZ-5rX"/>
                             <constraint firstItem="2MG-RE-rBD" firstAttribute="top" secondItem="AM4-Md-dLI" secondAttribute="bottom" constant="38" id="jrw-wq-tuV"/>
                             <constraint firstItem="b1u-J3-TBM" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="kWc-rq-9BE"/>
                             <constraint firstItem="2MG-RE-rBD" firstAttribute="centerX" secondItem="0VA-EQ-S65" secondAttribute="centerX" id="m1p-M2-31e"/>
                             <constraint firstItem="AM4-Md-dLI" firstAttribute="top" secondItem="0VA-EQ-S65" secondAttribute="bottom" constant="37" id="mIP-Ip-LbM"/>
                             <constraint firstItem="b1u-J3-TBM" firstAttribute="top" secondItem="2MG-RE-rBD" secondAttribute="bottom" constant="38" id="rpN-4y-KaL"/>
+                            <constraint firstAttribute="trailing" secondItem="tSz-PY-eAQ" secondAttribute="trailing" constant="10" id="sd5-Gx-BrU"/>
+                            <constraint firstItem="tSz-PY-eAQ" firstAttribute="top" secondItem="1dg-pg-sC8" secondAttribute="bottom" constant="8" id="snA-uo-lHZ"/>
                             <constraint firstItem="0VA-EQ-S65" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tam-D5-OZ1"/>
                             <constraint firstItem="0VA-EQ-S65" firstAttribute="top" secondItem="aR2-x8-U9T" secondAttribute="bottom" constant="79" id="vrC-hn-j0s"/>
+                            <constraint firstItem="8xS-LG-hzI" firstAttribute="leading" secondItem="gal-gn-NEO" secondAttribute="leading" id="wF4-Kx-np0"/>
+                            <constraint firstAttribute="trailing" secondItem="LOW-Dm-Y8X" secondAttribute="trailing" constant="10" id="yMu-sL-NS8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancleBtn" destination="tSz-PY-eAQ" id="ijc-4r-W8e"/>
                         <outlet property="downBtn" destination="2MG-RE-rBD" id="2PA-uP-MGx"/>
+                        <outlet property="queueBtn" destination="qAF-rI-aSL" id="4zE-QA-TGe"/>
                         <outlet property="quitBtn" destination="b1u-J3-TBM" id="ceh-VV-HRn"/>
+                        <outlet property="startBtn" destination="1dg-pg-sC8" id="vcB-B3-TM1"/>
                         <outlet property="switchBtn" destination="0VA-EQ-S65" id="ynL-ad-PbS"/>
                         <outlet property="upBtn" destination="AM4-Md-dLI" id="xRl-gN-GZa"/>
                     </connections>
